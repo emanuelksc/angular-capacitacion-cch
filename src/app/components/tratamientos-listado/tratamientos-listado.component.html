@@ -1,0 +1,95 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            <h3> LISTADO DE TRATAMIENTOS</h3>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-xl-12 text-right">
+                <button type="button" class="btn button-green-custom"(click)="AbrirModalTratamiento()" tooltip="Nuevo Tratamiento"><i class="fa-solid fa-plus"></i> Nuevo</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="mb-3">
+                    <label for="">Paciente</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class="col-xl-2 mt-4 pt-1">
+                <button type="button" class="btn button-green btn-sm"><i
+                        class="fa-solid fa-search"></i></button>&nbsp;&nbsp;
+                <button type="button" class="btn button-red btn-sm"><i class="fa-solid fa-eraser"></i></button>
+            </div>
+
+        </div>
+        <div class="row">
+
+
+            <div class="col-xl-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Paciente</th>
+                            <th scope="col">Tratamiento</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Fecha Tratamiento</th>
+                            <th scope="col">Monto Total</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Miguel Torres Vargas</td>
+                            <td>Profilaxis</td>
+                            <td>S/.100.00</td>
+                            <td>1</td>
+                            <td>10/11/2022</td>
+                            <td>S/100.00</td>
+                            <td>
+                                <button type="button" class="btn button-green btn-sm" tooltip="Editar Tratamiento">
+                                    <i class="fa-solid fa-pencil"></i></button>&nbsp;&nbsp;
+                                <button type="button" class="btn button-red btn-sm" tooltip="Eliminar Tratamiento"><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Miguel Torres Vargas</td>
+                            <td>Profilaxis</td>
+                            <td>S/.100.00</td>
+                            <td>1</td>
+                            <td>10/11/2022</td>
+                            <td>S/100.00</td>
+                            <td>
+                                <button type="button" class="btn button-green btn-sm" tooltip="Editar Tratamiento">
+                                    <i class="fa-solid fa-pencil"></i></button>&nbsp;&nbsp;
+                                <button type="button" class="btn button-red btn-sm" tooltip="Eliminar Tratamiento"><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Miguel Torres Vargas</td>
+                            <td>Profilaxis</td>
+                            <td>S/.100.00</td>
+                            <td>1</td>
+                            <td>10/11/2022</td>
+                            <td>S/100.00</td>
+                            <td>
+                                <button type="button" class="btn button-green btn-sm" tooltip="Editar Tratamiento">
+                                    <i class="fa-solid fa-pencil"></i></button>&nbsp;&nbsp;
+                                <button type="button" class="btn button-red btn-sm" tooltip="Eliminar Tratamiento"><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

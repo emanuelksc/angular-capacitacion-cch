@@ -1,0 +1,125 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-pacienteLabel">MODULO TRATAMIENTO</h1>
+        <button type="button" class="btn-close" (click)="CerrarModal()"></button>
+    </div>
+    <div class="modal-body">
+        <form  [formGroup]="dataFormGroup">
+            <div class="row">
+                <div class="col-xl-6 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Paciente *</label>
+                        <select class="form-select" formControlName="selectPaciente">
+                            <option selected>Seleccione una opción</option>
+                            <option value="1">Emanuel Samaniego Calderón</option>
+
+                        </select>
+                        <div
+                            *ngIf="Controls['selectPaciente'].invalid && (Controls['selectPaciente'].dirty || Controls['selectPaciente'].touched)" class="text-error">
+                            <div>Campo obligatorio</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Tratamiento *</label>
+                        <select class="form-select" formControlName="selectTratamiento">
+                            <option selected>Seleccione una opción</option>
+                            <option value="1">Profilaxis</option>
+
+                        </select>
+                        <div
+                            *ngIf="Controls['selectTratamiento'].invalid && (Controls['selectTratamiento'].dirty || Controls['selectTratamiento'].touched)" class="text-error">
+                            <div>Campo obligatorio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Precio *</label>
+                        <input type="number" class="form-control" formControlName="inputPrecio">
+                        <div
+                        *ngIf="Controls['inputPrecio'].invalid && (Controls['inputPrecio'].dirty || Controls['inputPrecio'].touched)" class="text-error">
+                        <div>Campo obligatorio</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Cantidad *</label>
+                        <input type="number" class="form-control" value="1" formControlName="inputCantidad">
+                        <div
+                        *ngIf="Controls['inputCantidad'].invalid && (Controls['inputCantidad'].dirty || Controls['inputCantidad'].touched)" class="text-error">
+                        <div>Campo obligatorio</div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Fecha tratamiento *</label>
+                        <input type="date" class="form-control" formControlName="inputFecha">
+                        <div
+                        *ngIf="Controls['inputFecha'].invalid && (Controls['inputFecha'].dirty || Controls['inputFecha'].touched)" class="text-error">
+                        <div>Campo obligatorio</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-6 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Total *</label>
+                        <input type="number" class="form-control" readonly formControlName="inpuTotal" >
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Descripción *</label>
+                        <textarea class="form-control" formControlName="textDescripcion"></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 text-center">
+                    <img id="uploadPreview1" width="150" height="150"
+                        src="images/image_not_available.jpg" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-sm-12">
+                    <label for="">Seleccione una foto</label>
+                    <input id="uploadImage1" type="file" class="form-control" name="images[1]"
+                        onchange="previewImage(1);" formControlName="inputfoto">
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-xl-12 col-sm-12">
+                    <div class="mb-3">
+                        <label for="">Observación</label>
+                        <input type="text" class="form-control"formControlName="inputObservacion">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn button-red-custom" (click)="CerrarModal()"><i
+                class="fa-sharp fa-solid fa-xmark"></i> Close</button>
+        <button type="button" class="btn button-green-custom" (click)="GuardarTratamiento()" ><i class="fa-solid fa-save"></i>
+            Guardar</button>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            <h3> LISTADO DE PACIENTES</h3>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-xl-12 text-right">
+                <button type="button" class="btn button-green-custom" tooltip="Nuevo Paciente" (click)=" AbrirModalPaciente()"><i class="fa-solid fa-plus" ></i> Nuevo</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-2">
+                <div class="mb-3">
+                    <label for="">Tipo documento</label>
+                    <select class="form-select">
+                        <option selected>Seleccione una opción</option>
+                        <option value="1">DNI</option>
+                        <option value="2">Pasoporte</option>
+                        <option value="3">Carnet de extranjeria</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="col-xl-2">
+                <div class="mb-3">
+                    <label for="">Número documento</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class="col-xl-6">
+                <div class="mb-3">
+                    <label for="">Paciente</label>
+                    <input type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class="col-xl-2 mt-4 pt-1">
+                <button type="button" class="btn button-green btn-sm"><i
+                        class="fa-solid fa-search"></i></button>&nbsp;&nbsp;
+                <button type="button" class="btn button-red btn-sm"><i
+                        class="fa-solid fa-eraser"></i></button>
+            </div>
+
+        </div>
+        <div class="row">
+
+
+            <div class="col-xl-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Nro. documento</th>
+                            <th scope="col">Paciente</th>
+                            <th scope="col">Fecha nacimiento</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>75236589</td>
+                            <td>Miguel Torres Vargas</td>
+                            <td>10-02-1993</td>
+                            <td>
+                                <button type="button" class="btn button-green btn-sm"
+                                tooltip="Editar paciente" (click)=" EditarModalPaciente()"> 
+                                    <i class="fa-solid fa-pencil"></i></button>&nbsp;&nbsp;
+                                <button type="button" class="btn button-red btn-sm" tooltip="Eliminar Paciente"><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>75059357</td>
+                            <td>Emanuel Samaniego Calderón</td>
+                            <td>10-02-1993</td>
+                            <td>
+                                <button type="button" class="btn button-green btn-sm" (click)=" EditarModalPaciente()"
+                                tooltip="Editar paciente">
+                                    <i class="fa-solid fa-pencil"></i></button>&nbsp;&nbsp;
+                                <button type="button" class="btn button-red btn-sm" tooltip="Eliminar Paciente"><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>412574589</td>
+                            <td>Silvana Estrada Arias</td>
+                            <td>16-04-2000</td>
+                            <td>
+                                <button type="button" class="btn button-green btn-sm" (click)=" EditarModalPaciente()"
+                                tooltip="Editar paciente">
+                                    <i class="fa-solid fa-pencil"></i></button>&nbsp;&nbsp;
+                                <button type="button" class="btn button-red btn-sm" tooltip="Eliminar Paciente"><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
